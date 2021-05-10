@@ -27,6 +27,7 @@ Route::post('resend-verify-email', [AuthController::class, 'resendVerifyEmail'])
 Route::match(['get', 'post'], '/forgot-password', [AuthController::class, 'forgotPassword'])->name('password.email');
 Route::match(['get', 'post'], '/reset-password', [AuthController::class, 'resetPassword'])->name('password.reset');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::resource('/userData','UserDataController');
 
 Route::middleware(['verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
