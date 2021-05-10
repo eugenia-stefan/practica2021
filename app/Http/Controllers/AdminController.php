@@ -23,4 +23,8 @@ class AdminController extends Controller
             ]
         );
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

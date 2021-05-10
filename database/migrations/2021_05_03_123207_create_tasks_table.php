@@ -39,4 +39,8 @@ class CreateTasksTable extends Migration
     {
         Schema::dropIfExists('tasks');
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

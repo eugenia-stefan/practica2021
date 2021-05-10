@@ -79,4 +79,8 @@ class AuthService
             }
         );
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

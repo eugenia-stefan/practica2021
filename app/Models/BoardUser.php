@@ -49,4 +49,8 @@ class BoardUser extends Pivot
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
