@@ -36,8 +36,4 @@ class CreateBoardUsersTable extends Migration
     {
         Schema::dropIfExists('board_user');
     }
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes

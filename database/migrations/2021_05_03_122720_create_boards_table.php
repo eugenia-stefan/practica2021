@@ -34,8 +34,4 @@ class CreateBoardsTable extends Migration
     {
         Schema::dropIfExists('boards');
     }
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes

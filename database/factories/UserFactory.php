@@ -35,8 +35,4 @@ class UserFactory extends Factory
             'email_verified_at' => now()
         ];
     }
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes

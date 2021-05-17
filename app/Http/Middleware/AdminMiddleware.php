@@ -36,8 +36,4 @@ class AdminMiddleware
 
         return redirect(route('dashboard'));
     }
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes

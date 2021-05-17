@@ -34,8 +34,4 @@ class TestSeeder extends Seeder
             )
             ->create();
     }
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes

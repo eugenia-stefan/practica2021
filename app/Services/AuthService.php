@@ -79,8 +79,9 @@ class AuthService
             }
         );
     }
-<<<<<<< Updated upstream
+    public function logoutUser(Request $request) {
+        Auth::logout();
+        return redirect('/login');
+
+    }
 }
-=======
-}
->>>>>>> Stashed changes

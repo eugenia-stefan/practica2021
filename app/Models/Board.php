@@ -72,8 +72,4 @@ class Board extends Model
     {
         return $this->hasMany(Task::class, 'board_id', 'id');
     }
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes

@@ -20,8 +20,4 @@ class DashboardController extends Controller
     {
         return view('dashboard.index');
     }
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes

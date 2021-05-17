@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BoardController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,12 +29,27 @@ Route::post('resend-verify-email', [AuthController::class, 'resendVerifyEmail'])
 Route::match(['get', 'post'], '/forgot-password', [AuthController::class, 'forgotPassword'])->name('password.email');
 Route::match(['get', 'post'], '/reset-password', [AuthController::class, 'resetPassword'])->name('password.reset');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-Route::resource('/userData','UserDataController');
 
 Route::middleware(['verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::middleware(['admin'])->group(function () {
-        Route::get('/users', [\App\Http\Controllers\AdminController::class, 'users'])->name('users.all');
+        Route::get('/users', [AdminController::class, 'users'])->name('users.all');
+        Route::post('/user/update', [AdminController::class, 'updateUser'])->name('users.update');
+        Route::post('/user-update/{id}', [AdminController::class, 'updateUserAjax'])->name('users.update-ajax');
+        Route::post('/user/delete/{id}', [AdminController::class, 'deleteUser'])->name('users.delete');
     });
+
+    Route::get('/boards', [BoardController::class, 'boards'])->name('boards.all');
+    Route::post('/board/update/{id}', [BoardController::class, 'updateBoard'])->name('boards.update');
+    Route::post('/board/delete/{id}', [BoardController::class, 'deleteBoard'])->name('boards.delete');
+
+    Route::get('/board/{id}', [BoardController::class, 'board'])->name('board.view');
+
+    Route::get('tasks', [TaskController::class, 'tasks'])->name('tasks.all');
+    Route::post('/tasks/update/{id}', [BoardController::class, 'updateTask'])->name('tasks.update');
+    Route::post('/tasks/delete/{id}', [BoardController::class, 'deleteTask'])->name('tasks.delete');
+
+    Route::get('/tasks/{id}', [BoardController::class, 'board'])->name('tasks.view');
+
 });

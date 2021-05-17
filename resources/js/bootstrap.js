@@ -1,9 +1,14 @@
-
 window._ = require('lodash');
 
 try {
     window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
 
     require('bootstrap');
     require('admin-lte');
@@ -36,8 +41,3 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
-$.ajaxSetup({
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-});

@@ -32,8 +32,4 @@ class BoardFactory extends Factory
             'user_id' => User::factory(),
         ];
     }
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes

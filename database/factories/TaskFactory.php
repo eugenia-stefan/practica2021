@@ -54,8 +54,4 @@ class TaskFactory extends Factory
             }
         });
     }
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes
