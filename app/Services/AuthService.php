@@ -79,9 +79,4 @@ class AuthService
             }
         );
     }
-    public function logoutUser(Request $request) {
-        Auth::logout();
-        return redirect('/login');
-
-    }
 }

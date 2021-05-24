@@ -46,10 +46,6 @@ Route::middleware(['verified'])->group(function () {
 
     Route::get('/board/{id}', [BoardController::class, 'board'])->name('board.view');
 
-    Route::get('tasks', [TaskController::class, 'tasks'])->name('tasks.all');
-    Route::post('/tasks/update/{id}', [BoardController::class, 'updateTask'])->name('tasks.update');
-    Route::post('/tasks/delete/{id}', [BoardController::class, 'deleteTask'])->name('tasks.delete');
-
-    Route::get('/tasks/{id}', [BoardController::class, 'board'])->name('tasks.view');
-
+    Route::post('/task/update/{id}', [BoardController::class, 'updateTask'])->name('tasks.update');
+    Route::post('/task/delete/{id}', [BoardController::class, 'deleteTask'])->name('tasks.delete');
 });

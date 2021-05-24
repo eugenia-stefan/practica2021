@@ -11,7 +11,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{route('dashtasks')}}">Dashtasks</a></li>
-                        <li class="breadcrumb-item active">taskss</li>
+                        <li class="breadcrumb-item active">Tasks</li>
                     </ol>
                 </div>
             </div>
